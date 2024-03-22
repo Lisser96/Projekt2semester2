@@ -1,0 +1,38 @@
+/*Variabler*/
+$bg-color: #e6dfbc;
+$nav-color: #e6dfbc;
+$footer-color: #000000;
+$primary-color:#4E7F30;
+$secondary-color: #A0D060;
+$text-color: #4E7F30;
+$padding: 1.5em;
+$font: Georgia; 
+$text-shadow: 1px 1px 1px #274018;
+
+/*Mixins*/
+@mixin flex ($justify: center, $align: center) {
+    display: flex;
+    align-items: $align;
+}
+
+/*btn = button*/
+
+@mixin btn ($bg-color: $primary-color, $btn-padding: 0.8em
+1em ) {
+    background-color: $bg-color;
+    padding: $btn-padding;
+    border-radius: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*cta= call to action*/
+/*vw= viewportwidth*/
+
+@mixin container1 ($width: 22vw) {
+    background-color: #ffffff;
+    width: $width;
+    padding: 3em;
+    margin: 3em auto;
+}

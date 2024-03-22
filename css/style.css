@@ -1,0 +1,668 @@
+@charset "UTF-8";
+/*Variabler*/
+/*Mixins*/
+/*btn = button*/
+/*cta= call to action*/
+/*vw= viewportwidth*/
+/*Generel*/
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia;
+  background-color: #e6dfbc;
+}
+body p {
+  font-size: 17px;
+  color: #4E7F30;
+  line-height: 1.5;
+}
+body h1, body h2, body h3, body h4 {
+  font-weight: 600;
+  color: #4E7F30;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5.1fr);
+  grid-auto-rows: minmax(50px, auto);
+}
+
+/*navigation*/
+header {
+  grid-column: 1/9;
+  display: flex;
+  align-items: center;
+  background-color: #e6dfbc;
+  border-bottom: 15px solid #4E7F30;
+}
+
+nav {
+  color: #4E7F30;
+  height: 6em;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+}
+nav img {
+  width: 190px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+nav a {
+  color: #4E7F30;
+  padding: 1.5em;
+  margin: 1.5em;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: 0px 0px 0px #274018;
+}
+nav a:hover {
+  color: #A0D060;
+}
+
+/*Burgermenu*/
+.mobile.nav .bars {
+  display: none;
+  cursor: pointer;
+}
+
+.toogleshow {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.active {
+  color: #4E7F30;
+}
+
+/*Headerbillede*/
+.header-img {
+  position: relative;
+  margin-bottom: 1em;
+}
+.header-img .banner-tekst {
+  position: absolute;
+  left: 59%;
+  top: 31%;
+  text-shadow: 1px 1px 1px #274018;
+}
+.header-img h1 {
+  font-size: 3.5vw;
+}
+.header-img p {
+  font-size: 2vw;
+}
+.header-img a {
+  background-color: #4E7F30;
+  padding: 0.8em 1em;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  /*kalder på vores mixin*/
+  position: absolute;
+}
+.header-img a:hover {
+  background-color: #A0D060;
+  transition: 0.4s ease-in-out;
+}
+.header-img .bg-billede-mobil {
+  display: none;
+}
+
+/*Main forside styling*/
+main {
+  grid-column: 1/8;
+  display: grid;
+  grid-template-columns: repeat(6.1fr);
+}
+main h2 {
+  grid-column: 1/8;
+  text-align: center;
+  font-size: 30px;
+  padding: 35px;
+}
+main .container1 {
+  grid-column: 1/8;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*flex containers*/
+.flex-container-1, .flex-container-2, .flex-container-3 {
+  background-color: #ffffff;
+  width: 22vw;
+  padding: 3em;
+  margin: 3em auto;
+  background-color: #e6dfbc;
+}
+.flex-container-1 img, .flex-container-2 img, .flex-container-3 img {
+  width: 0%;
+  margin: 0 auto;
+  display: block;
+}
+.flex-container-1 p, .flex-container-2 p, .flex-container-3 p {
+  margin-bottom: 1em;
+}
+.flex-container-1 a, .flex-container-2 a, .flex-container-3 a {
+  background-color: #4E7F30;
+  padding: 0.8em 1em;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+.flex-container-1 a:hover, .flex-container-2 a:hover, .flex-container-3 a:hover {
+  background-color: #A0D060;
+  transition: 0.4s ease-in-out;
+}
+
+/* Tekst og billede sektion*/
+.txt-img-section {
+  grid-column: 1/8;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.tekst {
+  grid-column: 1/9;
+  background-color: #4E7F30;
+  padding: 5em 5em 5em 5em;
+  text-align: center;
+}
+.tekst p, .tekst h2 {
+  color: #e6dfbc;
+}
+.tekst h2 {
+  text-align: center;
+}
+.tekst p:nth-of-type(4) {
+  margin-bottom: 3em;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  padding: 0.8em 1em;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #fff;
+}
+.secondary-btn:hover {
+  background-color: #fff;
+  color: #A0D060;
+  transition: 0.4s ease-in-out;
+}
+
+.billede {
+  grid-column: 1/8;
+  background-size: cover;
+}
+
+.begivenheder {
+  grid-column: 1/9;
+  background-color: #e6dfbc;
+  padding: 5em 5em 5em 5em;
+  text-align: center;
+}
+.begivenheder p {
+  text-align: center;
+}
+.begivenheder p:nth-of-type(2) {
+  margin-bottom: 3em;
+}
+
+/*Footer*/
+footer:nth-of-type(1) {
+  grid-column: 1/8;
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1em 4em;
+}
+footer:nth-of-type(1) p, footer:nth-of-type(1) h4 {
+  color: #e6dfbc;
+  line-height: 0.5;
+}
+footer:nth-of-type(1) h4 {
+  font-size: 18px;
+}
+footer:nth-of-type(1) a {
+  color: #4E7F30;
+}
+footer:nth-of-type(1) .logo-footer {
+  width: 100px;
+  height: auto;
+}
+
+.footer-left {
+  grid-column: 1/2;
+}
+
+.footer-right {
+  grid-column: 2/3;
+  background-color: #000000;
+  text-align: center;
+}
+.footer-right p {
+  color: #000000;
+}
+
+/*-----------------------------------menu1 underside "Skønhed og bæredygtighed"------------------------------------------*/
+/*Generel*/
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia;
+  background-color: #e6dfbc;
+}
+body p {
+  font-size: 17px;
+  color: #4E7F30;
+  line-height: 1.5;
+}
+body h1, body h2, body h3, body h4 {
+  font-weight: 600;
+  color: #4E7F30;
+}
+
+/*navigation*/
+header {
+  grid-column: 1/9;
+  display: flex;
+  align-items: center;
+  background-color: #e6dfbc;
+  border-bottom: 15px solid #4E7F30;
+}
+
+nav {
+  color: #4E7F30;
+  height: 6em;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+}
+nav img {
+  width: 190px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+nav a {
+  color: #4E7F30;
+  padding: 1.5em;
+  margin: 1.5em;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: 0px 0px 0px #274018;
+}
+nav a:hover {
+  color: #A0D060;
+}
+
+/*Burgermenu*/
+.mobile.nav .bars {
+  display: none;
+  cursor: pointer;
+}
+
+.toogleshow {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.active {
+  color: #4E7F30;
+}
+
+/*Headerbillede*/
+.header-img1 {
+  position: relative;
+  margin-bottom: 1em;
+}
+.header-img1 .banner-tekst1 {
+  position: absolute;
+  left: 25%;
+  top: 14%;
+  text-shadow: 1px 1px 1px #274018;
+}
+.header-img1 h1 {
+  font-size: 3.5vw;
+}
+.header-img1 p {
+  font-size: 2vw;
+  text-align: center;
+}
+.header-img1 a {
+  background-color: #4E7F30;
+  padding: 0.8em 1em;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  /*kalder på vores mixin*/
+  position: absolute;
+}
+.header-img1 a:hover {
+  background-color: #A0D060;
+  transition: 0.4s ease-in-out;
+}
+.header-img1 .bg-billede-mobil {
+  display: none;
+}
+
+/*Main forside styling*/
+main {
+  display: grid;
+}
+main h2 {
+  grid-column: 1/8;
+  font-size: 30px;
+  padding: 10px;
+  left: 20px;
+}
+main p {
+  margin-bottom: 2em;
+}
+
+/*flex container*/
+.flex-container-4 {
+  background-color: #e6dfbc;
+}
+.flex-container-4 p {
+  margin-bottom: 2em;
+  text-align: center;
+}
+.flex-container-4 .text {
+  margin-bottom: 2em;
+  text-align: justify;
+}
+.flex-container-4 a {
+  background-color: #4E7F30;
+  padding: 0.8em 1em;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+}
+.flex-container-4 a:hover {
+  background-color: #A0D060;
+  transition: 0.4s ease-in-out;
+}
+
+.primary-btn {
+  background-color: transparent;
+  padding: 0.8em 1em;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #fff;
+}
+.primary-btn:hover {
+  background-color: #fff;
+  color: #A0D060;
+  transition: 0.4s ease-in-out;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  padding: 0.8em 1em;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #fff;
+}
+.secondary-btn:hover {
+  background-color: #fff;
+  color: #A0D060;
+  transition: 0.4s ease-in-out;
+}
+
+.billede {
+  grid-column: 1/8;
+  background-size: cover;
+}
+
+/*Footer*/
+footer:nth-of-type(1) {
+  grid-column: 1/0;
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+}
+footer:nth-of-type(1) p, footer:nth-of-type(1) h4 {
+  color: #e6dfbc;
+  line-height: 0.5;
+}
+footer:nth-of-type(1) h4 {
+  font-size: 18px;
+}
+footer:nth-of-type(1) a {
+  color: #4E7F30;
+}
+
+.footer-1 {
+  grid-column: 1/9;
+}
+
+/*-----------------------------------menu 2 underside "Hårpleje og bæredygtighed"----------------------------------------*/
+/*Generel*/
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia;
+  background-color: #e6dfbc;
+}
+body p {
+  font-size: 17px;
+  color: #4E7F30;
+  line-height: 1.5;
+}
+body h1, body h2, body h3, body h4 {
+  font-weight: 600;
+  color: #4E7F30;
+}
+
+/*navigation*/
+header {
+  grid-column: 1/9;
+  display: flex;
+  align-items: center;
+  background-color: #e6dfbc;
+  border-bottom: 15px solid #4E7F30;
+}
+
+nav {
+  color: #4E7F30;
+  height: 6em;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+}
+nav img {
+  width: 190px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+nav a {
+  color: #4E7F30;
+  padding: 1.5em;
+  margin: 1.5em;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: 0px 0px 0px #274018;
+}
+nav a:hover {
+  color: #A0D060;
+}
+
+/*Burgermenu*/
+.mobile.nav .bars {
+  display: none;
+  cursor: pointer;
+}
+
+.toogleshow {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.active {
+  color: #4E7F30;
+}
+
+/*Headerbillede*/
+.header-img2 {
+  position: relative;
+  margin-bottom: 1em;
+}
+.header-img2 .banner-tekst2 {
+  position: absolute;
+  left: 25%;
+  top: 14%;
+  text-shadow: 1px 1px 1px #274018;
+}
+.header-img2 h1 {
+  font-size: 3.5vw;
+}
+.header-img2 p {
+  font-size: 2vw;
+  text-align: center;
+}
+.header-img2 a {
+  background-color: #4E7F30;
+  padding: 0.8em 1em;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  /*kalder på vores mixin*/
+  position: absolute;
+}
+.header-img2 a:hover {
+  background-color: #A0D060;
+  transition: 0.4s ease-in-out;
+}
+.header-img2 .bg-billede-mobil {
+  display: none;
+}
+
+/*Main forside styling*/
+main {
+  display: grid;
+}
+main h2 {
+  grid-column: 1/8;
+  font-size: 30px;
+  padding: 10px;
+  left: 20px;
+}
+main p {
+  margin-bottom: 2em;
+}
+
+/*flex container*/
+.flex-container-5 {
+  background-color: #e6dfbc;
+}
+.flex-container-5 p {
+  margin-bottom: 2em;
+  text-align: center;
+}
+.flex-container-5 .text {
+  margin-bottom: 2em;
+}
+.flex-container-5 a {
+  background-color: #4E7F30;
+  padding: 0.8em 1em;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+}
+.flex-container-5 a:hover {
+  background-color: #A0D060;
+  transition: 0.4s ease-in-out;
+}
+
+.primary-btn {
+  background-color: transparent;
+  padding: 0.8em 1em;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #fff;
+}
+.primary-btn:hover {
+  background-color: #fff;
+  color: #A0D060;
+  transition: 0.4s ease-in-out;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  padding: 0.8em 1em;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #fff;
+}
+.secondary-btn:hover {
+  background-color: #fff;
+  color: #A0D060;
+  transition: 0.4s ease-in-out;
+}
+
+.billede {
+  grid-column: 1/8;
+  background-size: cover;
+}
+
+/*Footer*/
+footer:nth-of-type(1) {
+  grid-column: 1/0;
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+}
+footer:nth-of-type(1) p, footer:nth-of-type(1) h4 {
+  color: #e6dfbc;
+  line-height: 0.5;
+}
+footer:nth-of-type(1) h4 {
+  font-size: 18px;
+}
+footer:nth-of-type(1) a {
+  color: #4E7F30;
+}
+
+.footer-1 {
+  grid-column: 1/9;
+}/*# sourceMappingURL=style.css.map */
